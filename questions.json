@@ -1,0 +1,242 @@
+[
+ {
+  "q": "7 × 8 = ?",
+  "o": [
+   "54",
+   "56",
+   "64",
+   "48"
+  ],
+  "a": 1
+ },
+ {
+  "q": "125 + 238 = ?",
+  "o": [
+   "353",
+   "363",
+   "373",
+   "343"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Ibu kota Indonesia saat ini (resmi) adalah…",
+  "o": [
+   "Bandung",
+   "Surabaya",
+   "Jakarta",
+   "Medan"
+  ],
+  "a": 2
+ },
+ {
+  "q": "Hewan yang bernapas dengan insang adalah…",
+  "o": [
+   "Kucing",
+   "Ikan",
+   "Katak dewasa",
+   "Burung"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Planet terdekat dengan Matahari adalah…",
+  "o": [
+   "Venus",
+   "Bumi",
+   "Merkurius",
+   "Mars"
+  ],
+  "a": 2
+ },
+ {
+  "q": "Lawan kata 'rajin' adalah…",
+  "o": [
+   "Tekun",
+   "Malas",
+   "Giat",
+   "Cekatan"
+  ],
+  "a": 1
+ },
+ {
+  "q": "1.000 − 487 = ?",
+  "o": [
+   "513",
+   "523",
+   "413",
+   "577"
+  ],
+  "a": 0
+ },
+ {
+  "q": "Air membeku pada suhu…",
+  "o": [
+   "100°C",
+   "50°C",
+   "0°C",
+   "−10°C"
+  ],
+  "a": 2
+ },
+ {
+  "q": "Sungai terpanjang di Indonesia berada di pulau…",
+  "o": [
+   "Jawa",
+   "Kalimantan",
+   "Sumatra",
+   "Bali"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Alat untuk mengukur suhu adalah…",
+  "o": [
+   "Barometer",
+   "Termometer",
+   "Penggaris",
+   "Timbangan"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Bilangan prima di bawah ini adalah…",
+  "o": [
+   "9",
+   "15",
+   "13",
+   "21"
+  ],
+  "a": 2
+ },
+ {
+  "q": "Proses tumbuhan membuat makanan dengan bantuan cahaya disebut…",
+  "o": [
+   "Respirasi",
+   "Fotosintesis",
+   "Evaporasi",
+   "Kondensasi"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Proklamasi kemerdekaan Indonesia dibacakan tahun…",
+  "o": [
+   "1942",
+   "1945",
+   "1950",
+   "1949"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Keliling persegi dengan sisi 9 cm adalah…",
+  "o": [
+   "18 cm",
+   "27 cm",
+   "36 cm",
+   "81 cm"
+  ],
+  "a": 2
+ },
+ {
+  "q": "Sinonim kata 'pandai' adalah…",
+  "o": [
+   "Bodoh",
+   "Pintar",
+   "Lambat",
+   "Malas"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Bagian bunga yang menjadi buah adalah…",
+  "o": [
+   "Mahkota",
+   "Kelopak",
+   "Putik (bakal buah)",
+   "Daun"
+  ],
+  "a": 2
+ },
+ {
+  "q": "Pulau terbesar di Indonesia adalah…",
+  "o": [
+   "Jawa",
+   "Sumatra",
+   "Kalimantan",
+   "Papua"
+  ],
+  "a": 2
+ },
+ {
+  "q": "144 ÷ 12 = ?",
+  "o": [
+   "10",
+   "11",
+   "12",
+   "14"
+  ],
+  "a": 2
+ },
+ {
+  "q": "Gas yang kita hirup untuk bernapas adalah…",
+  "o": [
+   "Oksigen",
+   "Nitrogen",
+   "Karbon dioksida",
+   "Helium"
+  ],
+  "a": 0
+ },
+ {
+  "q": "Lambang sila pertama Pancasila adalah…",
+  "o": [
+   "Rantai",
+   "Bintang",
+   "Pohon beringin",
+   "Kepala banteng"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Hasil dari 15 × 6 = ?",
+  "o": [
+   "80",
+   "90",
+   "96",
+   "100"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Hewan pemakan tumbuhan disebut…",
+  "o": [
+   "Karnivora",
+   "Herbivora",
+   "Omnivora",
+   "Insektivora"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Satu windu sama dengan … tahun",
+  "o": [
+   "4",
+   "8",
+   "10",
+   "12"
+  ],
+  "a": 1
+ },
+ {
+  "q": "Benda cair jika dipanaskan terus akan berubah menjadi…",
+  "o": [
+   "Padat",
+   "Gas",
+   "Es",
+   "Tetap cair"
+  ],
+  "a": 1
+ }
+]

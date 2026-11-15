@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="id"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Balap Keong — Controller</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#3a2208;--cream:#fff4d6;--orange:#ff9a1f;--orange2:#f07b00}
+*{box-sizing:border-box;margin:0}
+body{min-height:100dvh;font-family:'Fredoka',system-ui,sans-serif;color:var(--ink);background:linear-gradient(#8fd3f4,#bfe8c9 40%,#3b9440);padding:16px;display:flex;justify-content:center}
+main{width:100%;max-width:460px;display:flex;flex-direction:column;gap:14px}
+[hidden]{display:none!important}
+h1{font-size:34px;color:var(--cream);-webkit-text-stroke:5px var(--ink);paint-order:stroke fill;text-align:center}
+.card{background:#fff;border-radius:20px;padding:18px;box-shadow:0 5px 0 #0003;display:flex;flex-direction:column;gap:12px}
+input{font:inherit;font-size:20px;padding:12px 14px;border:3px solid var(--ink);border-radius:14px;width:100%}
+button{font:inherit;cursor:pointer;border:0}
+.skins{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.skin{background:#fff6e0;border:3px solid transparent;border-radius:14px;padding:4px 2px;font-size:12px;font-weight:700}
+.skin svg{height:36px;display:block;margin:auto}
+.skin.sel{border-color:var(--ink);background:#ffe9a8}.skin:disabled{opacity:.3}
+.big{font-size:22px;font-weight:700;padding:14px;border-radius:16px;background:#e8333a;color:#fff;box-shadow:0 5px 0 #8f1218}
+.err{color:#c0141c;font-weight:700;min-height:1.2em}
+.prog{height:16px;background:#0002;border-radius:99px;overflow:hidden}.prog>div{height:100%;background:var(--orange2);width:0;transition:width .5s}
+#q{font-size:24px;font-weight:700;line-height:1.25}
+.opt{font-size:20px;font-weight:500;text-align:left;padding:14px 16px;border-radius:14px;background:#fff6e0;border:3px solid var(--ink);color:var(--ink)}
+.opt.ok{background:#4fd16a;color:#fff;border-color:#1b7a31}.opt.no{background:#e8333a;color:#fff;border-color:#8f1218}
+.fb{text-align:center;font-size:22px;font-weight:700;min-height:1.4em}
+.center{text-align:center;font-size:22px;font-weight:700}
+</style></head><body><main>
+<h1>BALAP KEONG</h1>
+
+<div id="vJoin" class="card">
+  <input id="room" placeholder="Kode room" maxlength="4" autocapitalize="characters" autocomplete="off">
+  <input id="nick" placeholder="Nickname kamu" maxlength="12" autocomplete="off">
+  <div class="center" style="font-size:16px">Pilih skin keong</div>
+  <div class="skins" id="skins"></div>
+  <div class="err" id="err"></div>
+  <button class="big" id="join">GABUNG</button>
+</div>
+
+<div id="vWait" class="card" hidden><div class="center" id="wTxt">Kamu sudah masuk! Tunggu guru menekan MULAI.</div></div>
+
+<div id="vQuiz" hidden class="card">
+  <div class="prog"><div id="bar"></div></div><div class="center" id="cnt" style="font-size:16px"></div>
+  <div id="q"></div><div id="opts" style="display:flex;flex-direction:column;gap:10px"></div>
+  <div class="fb" id="fb"></div>
+</div>
+
+<div id="vEnd" class="card" hidden><div class="center" id="eTxt"></div><button class="big" id="back" hidden onclick="location.href='/play.html'">Gabung room baru</button></div>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script src="skins.js"></script>
+<script>
+const $=s=>document.querySelector(s), socket=io(); let skin=null, cur=null, busy=false;
+const show=id=>['vJoin','vWait','vQuiz','vEnd'].forEach(v=>$('#'+v).hidden=v!==id);
+$('#room').value=(new URLSearchParams(location.search).get('room')||'').toUpperCase();
+
+function drawSkins(taken=[]){
+  $('#skins').innerHTML='';
+  Object.entries(SKINS).forEach(([n,c])=>{
+    const b=document.createElement('button'); b.className='skin'+(skin===n?' sel':''); b.disabled=taken.includes(n);
+    b.innerHTML=snailSVG(c)+n; b.onclick=()=>{skin=n;drawSkins(taken)}; $('#skins').appendChild(b);
+  });
+  if(taken.includes(skin)) skin=null;
+}
+function peek(){ const c=$('#room').value.trim(); if(c.length===4) socket.emit('p:peek',c,r=>{ if(r.ok){drawSkins(r.taken);$('#err').textContent=''} else $('#err').textContent=r.err }); }
+$('#room').oninput=()=>{$('#room').value=$('#room').value.toUpperCase();peek()};
+socket.on('connect',peek); drawSkins();
+
+$('#join').onclick=()=>{
+  socket.emit('p:join',{code:$('#room').value,name:$('#nick').value,skin},r=>{
+    if(r.ok){show('vWait')} else {$('#err').textContent=r.err; if(r.taken) drawSkins(r.taken)}
+  });
+};
+
+socket.on('q:next',q=>{
+  cur=q.id; busy=false; $('#fb').textContent=''; $('#bar').style.width=q.pos+'%'; $('#cnt').textContent='Benar '+q.correct+' / '+q.target; $('#q').textContent=q.q;
+  const box=$('#opts'); box.innerHTML='';
+  q.o.forEach((t,i)=>{const b=document.createElement('button');b.className='opt';b.textContent=t;
+    b.onclick=()=>{ if(busy)return; busy=true;
+      socket.emit('p:answer',{id:cur,choice:i},res=>{
+        if(!res)return; const bs=box.children;
+        bs[res.correctIndex].classList.add('ok'); if(!res.correct) bs[i].classList.add('no');
+        $('#fb').textContent=res.correct?'✅ Benar! Keongmu maju':'❌ Salah, keong diam dulu';
+        $('#bar').style.width=res.pos+'%'; $('#cnt').textContent='Benar '+res.total+' / '+res.target;
+      });};
+    box.appendChild(b);});
+  show('vQuiz');
+});
+socket.on('p:end',e=>{ $('#eTxt').innerHTML=e.won?'🏆 Kamu juara 1!<br>Hebat!':'🏁 Balapan selesai.<br>Juaranya: '+'<span id="wn"></span>'; if(!e.won) $('#wn').textContent=e.winner; show('vEnd') });
+socket.on('p:reset',()=>{ $('#wTxt').textContent='Ronde baru! Tunggu guru menekan MULAI.'; show('vWait') });
+socket.on('room:closed',()=>{ $('#eTxt').textContent='Room ini sudah ditutup. Scan QR baru di TV untuk main lagi.'; $('#back').hidden=false; show('vEnd') });
+</script></body></html>

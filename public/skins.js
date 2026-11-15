@@ -1,0 +1,4 @@
+const SKINS = { Coral:'#ff6b5e', Mint:'#4fd1a1', Sunny:'#ffd23f', Berry:'#c2347a', Ocean:'#2f8fe0', Lime:'#9be22d', Peach:'#ffb48a', Bubble:'#ff8ad8' };
+function snailSVG(c) {
+  return `<svg viewBox="0 0 130 84" width="100%" height="100%"><path d="M8 72 Q4 58 20 56 L88 56 Q108 56 112 70 L114 72 Z" fill="#f6e7b8" stroke="#0003" stroke-width="2"/><path d="M104 60 Q106 38 112 26" stroke="#f6e7b8" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="113" cy="24" r="6" fill="#fff" stroke="#333" stroke-width="2"/><circle cx="115" cy="24" r="2.5" fill="#222"/><circle cx="54" cy="38" r="30" fill="${c}" stroke="#0004" stroke-width="3"/><path d="M54 38 m-4 0 a4 4 0 1 1 8 0 a10 10 0 1 1 -16 0 a17 17 0 1 1 30 0" fill="none" stroke="#0004" stroke-width="3" stroke-linecap="round"/></svg>`;
+}

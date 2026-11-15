@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="id"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Balap Keong</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#3a2208;--cream:#fff4d6;--orange:#ff9a1f;--orange2:#f07b00;--navy:#12315a}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;font-family:'Fredoka',system-ui,sans-serif;color:var(--ink);background:#1b5e20}
+button{font:inherit;cursor:pointer;border:0}
+section{position:absolute;inset:0;display:flex;flex-direction:column}
+[hidden]{display:none!important}
+.fs{background:#fff;color:var(--ink);padding:.5em 1em;border-radius:99px;font-weight:700;box-shadow:0 3px 0 #0003}
+/* HOME */
+#home{align-items:center;justify-content:center;text-align:center;gap:2vh;padding:3vh 6vw 17vh;
+ background:radial-gradient(circle at 12% 90%,#2f8a34 0 9vw,transparent 9.1vw),radial-gradient(circle at 34% 94%,#256d29 0 11vw,transparent 11.1vw),
+ radial-gradient(circle at 66% 92%,#2f8a34 0 12vw,transparent 12.1vw),radial-gradient(circle at 90% 88%,#256d29 0 10vw,transparent 10.1vw),
+ linear-gradient(#8fd3f4 0,#bfe8c9 42%,#3b9440 43%,#1b5e20 100%)}
+#home>*{position:relative;z-index:2}
+#home .fs{position:absolute;top:3vh;right:3vw;font-size:max(14px,1.3vw)}
+.logo{font-size:min(9.5vw,15vh);font-weight:700;line-height:.95;color:var(--cream);transform:rotate(-2deg);
+ text-shadow:.3vw 0 0 var(--ink),-.3vw 0 0 var(--ink),0 .3vw 0 var(--ink),0 -.3vw 0 var(--ink),.22vw .22vw 0 var(--ink),-.22vw .22vw 0 var(--ink),.22vw -.22vw 0 var(--ink),-.22vw -.22vw 0 var(--ink),0 .7vw 0 var(--ink)}
+.logo i{display:block;font-style:normal;color:var(--orange)}
+.desc{font-size:max(16px,1.8vw);max-width:40ch;background:#ffffffb8;padding:.5em 1em;border-radius:1em;font-weight:500}
+.road{position:absolute;left:0;right:0;bottom:0;height:14vh;background:var(--orange);border-top:1vh solid var(--orange2);z-index:1}
+.road::after{content:"";position:absolute;inset:60% 0 auto;border-top:.6vh dashed #fff8}
+.road .sn{position:absolute;bottom:35%;height:9vh;aspect-ratio:130/84}
+#play{font-size:max(26px,4vw);font-weight:700;padding:.3em 1.6em;border-radius:99px;color:#fff;background:#e8333a;box-shadow:0 .8vh 0 #8f1218,0 2vh 3vh #0005;transition:transform .1s}
+#play:hover{transform:scale(1.04)}#play:active{transform:translateY(.6vh);box-shadow:0 .2vh 0 #8f1218}
+/* ARENA */
+#arena{background:var(--navy)}
+.bar{display:flex;align-items:center;gap:2vw;padding:1vh 2vw;background:var(--navy);color:var(--cream);font-size:max(15px,1.6vw);font-weight:700}
+.bar b{font-size:1.2em;margin-right:auto}.bar .fs{font-size:.7em}
+#scene{flex:1;position:relative;min-height:0;background:#40c4a0}
+#forest{position:absolute;left:0;right:0;top:0;height:36%}
+#forest svg{width:100%;height:100%;display:block}
+#track{position:absolute;left:0;right:0;top:31%;bottom:5%;display:flex;flex-direction:column;background:#d4795a;border-top:.7vh solid #fff;border-bottom:.7vh solid #fff}
+.lane{flex:1;position:relative;border-bottom:.7vh solid #fff;min-height:0}.lane:last-child{border-bottom:0}
+.wm{position:absolute;left:1.5%;top:50%;transform:translateY(-50%);font-size:min(2.2vw,3.4vh);font-weight:700;font-style:italic;color:#fff;opacity:.45;max-width:15%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.wm.empty{opacity:.22;font-weight:500}
+.startl{position:absolute;left:16.5%;top:-.7vh;bottom:-.7vh;width:.7vw;background:#fff;transform:skewX(-14deg)}
+.finl{position:absolute;left:79%;top:-.7vh;bottom:-.7vh;width:4.2%;transform:skewX(-14deg);background:conic-gradient(#111 25%,#fff 0 50%,#111 0 75%,#fff 0) 0 0/50% 12.5%}
+.snail{position:absolute;top:8%;height:84%;aspect-ratio:130/84;left:12%;transition:left .9s cubic-bezier(.3,1.3,.5,1);z-index:2}
+.panel{display:flex;align-items:center;gap:2.5vw;padding:1.2vh 2vw;color:var(--cream)}
+.qrbox{display:flex;align-items:center;gap:1.2vw}
+#qr{height:min(20vh,16vw);aspect-ratio:1;background:#fff;padding:.6vh;border-radius:1vh}
+.qrbox small{font-size:max(12px,1.1vw);opacity:.85}
+#code{font-size:max(30px,4.6vw);font-weight:700;letter-spacing:.12em;line-height:1}
+#plist{flex:1;display:flex;flex-wrap:wrap;gap:.8vh .8vw;align-content:center}
+.chip{display:flex;align-items:center;gap:.5em;background:#fff;color:var(--ink);padding:.3em .9em .3em .4em;border-radius:99px;font-weight:700;font-size:max(14px,1.4vw)}
+.chip i{width:1.4em;height:1.4em;border-radius:50%;border:2px solid #0004}
+#count{width:100%;font-size:max(14px,1.4vw);opacity:.9}
+#start{font-size:max(20px,2.4vw);font-weight:700;padding:.5em 1.1em;border-radius:99px;background:#ffd23f;color:var(--ink);box-shadow:0 .7vh 0 #b78f00}
+#start:disabled{opacity:.4;box-shadow:none;cursor:not-allowed}
+/* PEMENANG */
+#win{position:absolute;inset:0;background:#000b;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5vh;color:var(--cream);text-align:center;z-index:9}
+#win .ws{height:min(20vh,20vw);aspect-ratio:130/84}
+#win small{font-size:max(18px,2.4vw);letter-spacing:.05em}
+#wname{font-size:min(11vw,18vh);font-weight:700;line-height:1;color:#ffd23f;max-width:90vw;overflow:hidden;text-overflow:ellipsis}
+#rank{font-size:max(16px,2vw);display:flex;flex-direction:column;gap:.3em}
+#win .row{display:flex;gap:2vw;margin-top:1.5vh}
+#win button{font-size:max(18px,2.2vw);font-weight:700;padding:.45em 1.3em;border-radius:99px;background:#fff;color:var(--ink)}
+#win #next{background:#ffd23f;box-shadow:0 .7vh 0 #b78f00}
+@media(prefers-reduced-motion:reduce){.snail{transition:none}}
+</style></head><body>
+
+<section id="home">
+  <button class="fs" data-fs>⛶ Layar penuh</button>
+  <h1 class="logo">BALAP<i>KEONG</i></h1>
+  <p class="desc">Jawab soal di HP masing-masing, keong kamu melaju kalau jawabannya benar. Siapa duluan sampai garis finish?</p>
+  <button id="play">PLAY</button>
+  <div class="road"></div>
+</section>
+
+<section id="arena" hidden>
+  <div class="bar"><b>BALAP KEONG</b><span id="status"></span><button class="fs" data-fs>⛶ Layar penuh</button></div>
+  <div id="scene"><div id="forest"></div><div id="track"><div class="startl"></div><div class="finl"></div></div></div>
+  <div class="panel">
+    <div class="qrbox"><img id="qr" alt="QR Code untuk bergabung"><div><small>Pindai QR atau masukkan kode room</small><div id="code"></div></div></div>
+    <div id="plist"><div id="count"></div></div>
+    <button id="start" disabled>MULAI BALAPAN</button>
+  </div>
+  <div id="win" hidden>
+    <small>🏆 PEMENANG 🏆</small><div class="ws" id="wsnail"></div><div id="wname"></div>
+    <div id="rank"></div>
+    <div class="row"><button id="next">NEXT GAME</button><button id="quit">Keluar</button></div>
+  </div>
+</section>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="skins.js"></script>
+<script>
+const $ = s => document.querySelector(s), socket = io();
+$('.road').innerHTML = Object.values(SKINS).slice(0,4).map((c,i)=>`<div class="sn" style="left:${10+i*22}vw">${snailSVG(c)}</div>`).join('');
+
+// Hutan di atas lintasan
+(function(){
+  let t='';
+  for(let i=0;i<13;i++){const x=40+i*125+(i%2)*30,h=150+(i*37%60),w=i%3?1:1.15;
+    t+=`<rect x="${x-9}" y="${300-h}" width="18" height="${h}" fill="#16235a"/>`+
+       [0,1,2].map(k=>`<ellipse cx="${x+(k%2?10:-8)}" cy="${300-h+30+k*34}" rx="${(70-k*8)*w}" ry="26" fill="${k%2?'#35b08a':'#3fc7a0'}"/>`).join('');}
+  $('#forest').innerHTML=`<svg viewBox="0 0 1600 300" preserveAspectRatio="xMidYMax slice"><rect width="1600" height="300" fill="#7fd0f2"/><ellipse cx="300" cy="60" rx="140" ry="30" fill="#bfe8fb"/><ellipse cx="1150" cy="80" rx="170" ry="34" fill="#bfe8fb"/>${t}<rect y="248" width="1600" height="52" fill="#40c4a0"/></svg>`;
+})();
+
+function toggleFS(){
+  const d=document, el=d.documentElement;
+  if(d.fullscreenElement||d.webkitFullscreenElement) (d.exitFullscreen||d.webkitExitFullscreen).call(d);
+  else (el.requestFullscreen||el.webkitRequestFullscreen||(()=>alert('Browser ini tidak mendukung layar penuh.'))).call(el);
+}
+document.querySelectorAll('[data-fs]').forEach(b=>b.onclick=toggleFS);
+
+const lanes=[0,1,2,3].map(i=>{
+  const ln=document.createElement('div'); ln.className='lane';
+  ln.innerHTML='<div class="wm empty">Jalur '+(i+1)+'</div><div class="snail" hidden></div>';
+  $('#track').insertBefore(ln,$('.startl'));
+  return {wm:ln.querySelector('.wm'), sn:ln.querySelector('.snail'), skin:null};
+});
+
+function enterRoom(r){ $('#home').hidden=true; $('#arena').hidden=false; $('#win').hidden=true; $('#qr').src=r.qr; $('#code').textContent=r.code; }
+$('#play').onclick=()=>{ $('#play').disabled=true; socket.emit('tv:create',{},enterRoom); };
+$('#next').onclick=()=>socket.emit('tv:new',{},enterRoom);   // room baru: kode & QR baru
+$('#start').onclick=()=>socket.emit('tv:start');
+$('#quit').onclick=()=>location.reload();
+socket.on('room:closed',()=>location.reload());
+
+socket.on('room:update',r=>{
+  const ps=r.players;
+  lanes.forEach((L,i)=>{
+    const p=ps[i]; L.sn.hidden=!p; L.wm.classList.toggle('empty',!p);
+    if(!p){L.skin=null;L.wm.textContent='Jalur '+(i+1);L.sn.style.left='12%';return}
+    if(L.skin!==p.skin){L.sn.innerHTML=snailSVG(SKINS[p.skin]);L.skin=p.skin}
+    L.wm.textContent=p.name; L.sn.style.left=(12+p.pos*0.62)+'%';
+  });
+  const list=$('#plist'); list.querySelectorAll('.chip').forEach(c=>c.remove());
+  ps.forEach(p=>{const c=document.createElement('div');c.className='chip';
+    const dot=document.createElement('i');dot.style.background=SKINS[p.skin];c.append(dot,p.name);list.appendChild(c)});
+  $('#count').textContent=ps.length+' / 4 pemain sudah masuk';
+  $('#status').textContent={lobby:'Menunggu pemain',racing:'Balapan! Siapa duluan '+r.target+' jawaban benar?',done:'Selesai'}[r.state];
+  $('#start').hidden=r.state!=='lobby'; $('#start').disabled=ps.length<1;
+  if(r.state==='done'){
+    const sorted=[...ps].sort((a,b)=>b.correct-a.correct), w=sorted.find(p=>p.name===r.winner)||sorted[0];
+    $('#wsnail').innerHTML=snailSVG(SKINS[w.skin]); $('#wname').textContent=r.winner;
+    $('#rank').innerHTML=''; sorted.forEach((p,i)=>{const d=document.createElement('div');d.textContent=(i+1)+'. '+p.name+' — '+p.correct+'/'+r.target+' benar';$('#rank').appendChild(d)});
+    $('#win').hidden=false;
+  }
+});
+</script></body></html>
