@@ -1,242 +1,437 @@
 [
- {
-  "q": "7 × 8 = ?",
-  "o": [
-   "54",
-   "56",
-   "64",
-   "48"
-  ],
-  "a": 1
- },
- {
-  "q": "125 + 238 = ?",
-  "o": [
-   "353",
-   "363",
-   "373",
-   "343"
-  ],
-  "a": 1
- },
- {
-  "q": "Ibu kota Indonesia saat ini (resmi) adalah…",
-  "o": [
-   "Bandung",
-   "Surabaya",
-   "Jakarta",
-   "Medan"
-  ],
-  "a": 2
- },
- {
-  "q": "Hewan yang bernapas dengan insang adalah…",
-  "o": [
-   "Kucing",
-   "Ikan",
-   "Katak dewasa",
-   "Burung"
-  ],
-  "a": 1
- },
- {
-  "q": "Planet terdekat dengan Matahari adalah…",
-  "o": [
-   "Venus",
-   "Bumi",
-   "Merkurius",
-   "Mars"
-  ],
-  "a": 2
- },
- {
-  "q": "Lawan kata 'rajin' adalah…",
-  "o": [
-   "Tekun",
-   "Malas",
-   "Giat",
-   "Cekatan"
-  ],
-  "a": 1
- },
- {
-  "q": "1.000 − 487 = ?",
-  "o": [
-   "513",
-   "523",
-   "413",
-   "577"
-  ],
-  "a": 0
- },
- {
-  "q": "Air membeku pada suhu…",
-  "o": [
-   "100°C",
-   "50°C",
-   "0°C",
-   "−10°C"
-  ],
-  "a": 2
- },
- {
-  "q": "Sungai terpanjang di Indonesia berada di pulau…",
-  "o": [
-   "Jawa",
-   "Kalimantan",
-   "Sumatra",
-   "Bali"
-  ],
-  "a": 1
- },
- {
-  "q": "Alat untuk mengukur suhu adalah…",
-  "o": [
-   "Barometer",
-   "Termometer",
-   "Penggaris",
-   "Timbangan"
-  ],
-  "a": 1
- },
- {
-  "q": "Bilangan prima di bawah ini adalah…",
-  "o": [
-   "9",
-   "15",
-   "13",
-   "21"
-  ],
-  "a": 2
- },
- {
-  "q": "Proses tumbuhan membuat makanan dengan bantuan cahaya disebut…",
-  "o": [
-   "Respirasi",
-   "Fotosintesis",
-   "Evaporasi",
-   "Kondensasi"
-  ],
-  "a": 1
- },
- {
-  "q": "Proklamasi kemerdekaan Indonesia dibacakan tahun…",
-  "o": [
-   "1942",
-   "1945",
-   "1950",
-   "1949"
-  ],
-  "a": 1
- },
- {
-  "q": "Keliling persegi dengan sisi 9 cm adalah…",
-  "o": [
-   "18 cm",
-   "27 cm",
-   "36 cm",
-   "81 cm"
-  ],
-  "a": 2
- },
- {
-  "q": "Sinonim kata 'pandai' adalah…",
-  "o": [
-   "Bodoh",
-   "Pintar",
-   "Lambat",
-   "Malas"
-  ],
-  "a": 1
- },
- {
-  "q": "Bagian bunga yang menjadi buah adalah…",
-  "o": [
-   "Mahkota",
-   "Kelopak",
-   "Putik (bakal buah)",
-   "Daun"
-  ],
-  "a": 2
- },
- {
-  "q": "Pulau terbesar di Indonesia adalah…",
-  "o": [
-   "Jawa",
-   "Sumatra",
-   "Kalimantan",
-   "Papua"
-  ],
-  "a": 2
- },
- {
-  "q": "144 ÷ 12 = ?",
-  "o": [
-   "10",
-   "11",
-   "12",
-   "14"
-  ],
-  "a": 2
- },
- {
-  "q": "Gas yang kita hirup untuk bernapas adalah…",
-  "o": [
-   "Oksigen",
-   "Nitrogen",
-   "Karbon dioksida",
-   "Helium"
-  ],
-  "a": 0
- },
- {
-  "q": "Lambang sila pertama Pancasila adalah…",
-  "o": [
-   "Rantai",
-   "Bintang",
-   "Pohon beringin",
-   "Kepala banteng"
-  ],
-  "a": 1
- },
- {
-  "q": "Hasil dari 15 × 6 = ?",
-  "o": [
-   "80",
-   "90",
-   "96",
-   "100"
-  ],
-  "a": 1
- },
- {
-  "q": "Hewan pemakan tumbuhan disebut…",
-  "o": [
-   "Karnivora",
-   "Herbivora",
-   "Omnivora",
-   "Insektivora"
-  ],
-  "a": 1
- },
- {
-  "q": "Satu windu sama dengan … tahun",
-  "o": [
-   "4",
-   "8",
-   "10",
-   "12"
-  ],
-  "a": 1
- },
- {
-  "q": "Benda cair jika dipanaskan terus akan berubah menjadi…",
-  "o": [
-   "Padat",
-   "Gas",
-   "Es",
-   "Tetap cair"
-  ],
-  "a": 1
- }
+  {
+    "q": "Apa yang dimaksud dengan berpikir komputasional?",
+    "o": [
+      "Cara berpikir untuk menyelesaikan masalah secara logis dan sistematis",
+      "Cara menghafal semua rumus komputer",
+      "Cara menggunakan internet",
+      "Cara memperbaiki perangkat keras"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Tujuan utama berpikir komputasional adalah ...",
+    "o": [
+      "Membuat komputer menjadi lebih mahal",
+      "Menyelesaikan masalah secara efektif dan efisien",
+      "Menghindari penggunaan teknologi",
+      "Menghafalkan bahasa pemrograman"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Berikut yang termasuk empat fondasi berpikir komputasional adalah ...",
+    "o": [
+      "Mengetik, mencetak, menyimpan, menghapus",
+      "Menggambar, membaca, menulis, berhitung",
+      "Dekomposisi, pengenalan pola, abstraksi, algoritma",
+      "Hardware, software, brainware, internet"
+    ],
+    "a": 2
+  },
+  {
+    "q": "Dekomposisi adalah proses ...",
+    "o": [
+      "Memecah masalah besar menjadi bagian-bagian kecil",
+      "Menggabungkan semua masalah",
+      "Menghapus informasi penting",
+      "Mencari kesalahan komputer"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Contoh penerapan dekomposisi adalah ...",
+    "o": [
+      "Mengerjakan semua tugas sekaligus",
+      "Membagi tugas membuat acara menjadi beberapa bagian",
+      "Mengabaikan tugas yang sulit",
+      "Menyalin pekerjaan teman"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Pengenalan pola bertujuan untuk ...",
+    "o": [
+      "Menghapus data yang tidak diperlukan",
+      "Membuat masalah semakin rumit",
+      "Menemukan kesamaan atau keteraturan dalam masalah",
+      "Mengubah perangkat komputer"
+    ],
+    "a": 2
+  },
+  {
+    "q": "Seorang siswa melihat bahwa setiap hari Senin terjadi kemacetan di depan sekolah. Ia sedang melakukan ...",
+    "o": ["Abstraksi", "Pengenalan pola", "Dekomposisi", "Pengkodean"],
+    "a": 1
+  },
+  {
+    "q": "Abstraksi merupakan proses ...",
+    "o": [
+      "Memperhatikan seluruh detail tanpa memilih",
+      "Mengumpulkan semua masalah",
+      "Menghilangkan informasi penting",
+      "Memusatkan perhatian pada informasi yang relevan"
+    ],
+    "a": 3
+  },
+  {
+    "q": "Contoh abstraksi dalam kehidupan sehari-hari adalah ...",
+    "o": [
+      "Membuat peta dengan hanya menampilkan jalan penting",
+      "Mencatat semua warna bangunan di kota",
+      "Menghafalkan semua nomor kendaraan",
+      "Mengumpulkan seluruh sampah"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Algoritma adalah ...",
+    "o": [
+      "Perangkat keras komputer",
+      "Kumpulan gambar digital",
+      "Urutan langkah logis untuk menyelesaikan masalah",
+      "Bahasa untuk menggambar"
+    ],
+    "a": 2
+  },
+  {
+    "q": "Berikut contoh algoritma sederhana adalah ...",
+    "o": [
+      "Membeli makanan tanpa rencana",
+      "Langkah-langkah membuat mi instan",
+      "Melihat televisi",
+      "Mendengarkan musik"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Langkah pertama dalam menyelesaikan masalah secara komputasional adalah ...",
+    "o": [
+      "Memahami dan mengidentifikasi masalah",
+      "Langsung membuat program",
+      "Menghapus semua data",
+      "Mencari jawaban secara acak"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Mengapa masalah perlu dipecah menjadi bagian kecil?",
+    "o": [
+      "Agar masalah tidak pernah selesai",
+      "Agar pekerjaan semakin banyak",
+      "Agar lebih mudah dipahami dan diselesaikan",
+      "Agar membutuhkan waktu lebih lama"
+    ],
+    "a": 2
+  },
+  {
+    "q": "Ketika menemukan pola bilangan 2, 4, 6, 8, angka berikutnya adalah ...",
+    "o": ["9", "10", "11", "12"],
+    "a": 1
+  },
+  {
+    "q": "Pola dari urutan 5, 10, 15, 20 adalah ...",
+    "o": ["Bertambah 5", "Berkurang 5", "Dikali 2", "Dibagi 2"],
+    "a": 0
+  },
+  {
+    "q": "Dalam berpikir komputasional, informasi yang tidak relevan sebaiknya ...",
+    "o": [
+      "Disimpan semuanya",
+      "Dijadikan prioritas",
+      "Diperbanyak",
+      "Diabaikan dalam proses abstraksi"
+    ],
+    "a": 3
+  },
+  {
+    "q": "Urutan langkah algoritma harus ...",
+    "o": [
+      "Acak dan bebas",
+      "Jelas, logis, dan berurutan",
+      "Selalu panjang",
+      "Sulit dipahami"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Contoh dekomposisi saat membersihkan rumah adalah ...",
+    "o": [
+      "Membersihkan semua ruangan secara bersamaan",
+      "Membiarkan rumah kotor",
+      "Membagi pekerjaan menjadi menyapu, mengepel, dan merapikan barang",
+      "Membuang semua perabot"
+    ],
+    "a": 2
+  },
+  {
+    "q": "Jika seorang siswa menemukan kesamaan cara menyelesaikan beberapa soal matematika, ia menggunakan konsep ...",
+    "o": ["Pengenalan pola", "Abstraksi", "Dekomposisi", "Simulasi"],
+    "a": 0
+  },
+  {
+    "q": "Manfaat berpikir komputasional adalah ...",
+    "o": [
+      "Membuat pekerjaan lebih rumit",
+      "Mengurangi kemampuan berpikir",
+      "Menghindari penyelesaian masalah",
+      "Membantu menyelesaikan masalah secara terstruktur"
+    ],
+    "a": 3
+  },
+  {
+    "q": "Flowchart digunakan untuk ...",
+    "o": [
+      "Menyimpan file",
+      "Menggambarkan alur algoritma",
+      "Mempercepat internet",
+      "Mengedit gambar"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Simbol oval pada flowchart biasanya menunjukkan ...",
+    "o": ["Proses", "Keputusan", "Mulai atau selesai", "Input data"],
+    "a": 2
+  },
+  {
+    "q": "Simbol belah ketupat pada flowchart menunjukkan ...",
+    "o": ["Keputusan atau percabangan", "Proses", "Awal program", "Dokumen"],
+    "a": 0
+  },
+  {
+    "q": "Simbol persegi panjang pada flowchart menunjukkan ...",
+    "o": ["Input atau output", "Keputusan", "Mulai atau selesai", "Proses"],
+    "a": 3
+  },
+  {
+    "q": "Dalam algoritma, percabangan digunakan ketika ...",
+    "o": [
+      "Semua langkah harus sama",
+      "Ada kondisi yang menentukan langkah berikutnya",
+      "Program tidak membutuhkan data",
+      "Tidak ada pilihan"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Contoh percabangan dalam kehidupan sehari-hari adalah ...",
+    "o": [
+      "Menyapu lantai",
+      "Menulis nama",
+      "Jika hujan membawa payung, jika tidak hujan tidak perlu",
+      "Membaca buku"
+    ],
+    "a": 2
+  },
+  {
+    "q": "Perulangan dalam algoritma berarti ...",
+    "o": [
+      "Melakukan langkah tertentu secara berulang",
+      "Menghentikan seluruh proses",
+      "Menghapus semua instruksi",
+      "Mengubah warna layar"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Contoh perulangan adalah ...",
+    "o": [
+      "Membeli satu buku",
+      "Membuka pintu satu kali",
+      "Menyalakan lampu",
+      "Melakukan push-up sebanyak 10 kali"
+    ],
+    "a": 3
+  },
+  {
+    "q": "Ketika membuat jadwal belajar, membagi waktu untuk setiap mata pelajaran merupakan ...",
+    "o": ["Pengenalan pola", "Dekomposisi", "Penghapusan data", "Enkripsi"],
+    "a": 1
+  },
+  {
+    "q": "Dalam membuat aplikasi perpustakaan, fitur peminjaman, pengembalian, dan pencarian buku merupakan contoh ...",
+    "o": ["Abstraksi", "Perulangan", "Dekomposisi", "Jaringan komputer"],
+    "a": 2
+  },
+  {
+    "q": "Sebuah toko mencatat jumlah penjualan setiap hari dan membandingkannya untuk menemukan kecenderungan. Hal ini merupakan ...",
+    "o": ["Pengenalan pola", "Dekomposisi", "Abstraksi", "Penghapusan"],
+    "a": 0
+  },
+  {
+    "q": "Saat membuat denah sekolah, hanya ruang kelas, kantor, dan gerbang yang ditampilkan. Hal ini merupakan ...",
+    "o": ["Algoritma", "Pengenalan pola", "Perulangan", "Abstraksi"],
+    "a": 3
+  },
+  {
+    "q": "Jika langkah algoritma tidak disusun secara benar, kemungkinan yang terjadi adalah ...",
+    "o": [
+      "Program selalu lebih cepat",
+      "Hasil penyelesaian menjadi salah",
+      "Komputer otomatis memperbaiki semuanya",
+      "Tidak ada pengaruh"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Manakah urutan algoritma yang benar untuk mencuci tangan?",
+    "o": [
+      "Mengeringkan, membasahi, memakai sabun, membilas",
+      "Memakai sabun, mengeringkan, membasahi, membilas",
+      "Membasahi, memakai sabun, menggosok, membilas, mengeringkan",
+      "Membilas, mengeringkan, membasahi, memakai sabun"
+    ],
+    "a": 2
+  },
+  {
+    "q": "Mengidentifikasi informasi penting dari sebuah cerita merupakan penerapan ...",
+    "o": ["Abstraksi", "Perulangan", "Percabangan", "Dekomposisi"],
+    "a": 0
+  },
+  {
+    "q": "Berpikir komputasional dapat diterapkan pada ...",
+    "o": [
+      "Komputer saja",
+      "Programmer saja",
+      "Laboratorium komputer saja",
+      "Berbagai masalah dalam kehidupan sehari-hari"
+    ],
+    "a": 3
+  },
+  {
+    "q": "Ketika menyusun rute tercepat menuju sekolah, kita sedang berusaha ...",
+    "o": [
+      "Menghafal semua jalan",
+      "Mencari solusi yang efektif dan efisien",
+      "Menghindari perencanaan",
+      "Membuat masalah baru"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Salah satu ciri algoritma yang baik adalah ...",
+    "o": [
+      "Tidak memiliki tujuan",
+      "Langkahnya membingungkan",
+      "Memiliki langkah yang jelas dan menghasilkan solusi",
+      "Selalu menggunakan komputer"
+    ],
+    "a": 2
+  },
+  {
+    "q": "Seorang siswa mengelompokkan benda berdasarkan warna. Kegiatan ini menunjukkan ...",
+    "o": [
+      "Pengenalan pola atau kesamaan",
+      "Penghapusan file",
+      "Pengkodean",
+      "Dekomposisi perangkat"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Apa yang dimaksud dengan efisien dalam penyelesaian masalah?",
+    "o": [
+      "Menggunakan sebanyak mungkin langkah",
+      "Menghabiskan banyak waktu",
+      "Mengulang pekerjaan tanpa tujuan",
+      "Mencapai hasil dengan sumber daya yang optimal"
+    ],
+    "a": 3
+  },
+  {
+    "q": "Ketika sebuah masalah terlalu kompleks, langkah yang tepat adalah ...",
+    "o": [
+      "Mengabaikannya",
+      "Memecahnya menjadi beberapa masalah kecil",
+      "Menyelesaikannya secara acak",
+      "Menunggu orang lain"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Urutan angka 3, 6, 12, 24 memiliki pola. Angka berikutnya adalah ...",
+    "o": ["27", "36", "48", "42"],
+    "a": 2
+  },
+  {
+    "q": "Dalam sebuah algoritma, input berarti ...",
+    "o": [
+      "Data yang dimasukkan ke dalam proses",
+      "Hasil akhir",
+      "Kesalahan program",
+      "Perangkat keluaran"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Output dalam proses komputasi berarti ...",
+    "o": [
+      "Data yang belum diproses",
+      "Instruksi awal",
+      "Perintah pengulangan",
+      "Hasil yang diperoleh dari proses"
+    ],
+    "a": 3
+  },
+  {
+    "q": "Proses dalam algoritma merupakan ...",
+    "o": [
+      "Hasil cetakan",
+      "Langkah pengolahan input menjadi output",
+      "Data yang dihapus",
+      "Perangkat untuk menyimpan file"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Jika lampu lalu lintas berwarna merah maka kendaraan berhenti. Ini merupakan contoh ...",
+    "o": [
+      "Pengenalan pola saja",
+      "Abstraksi saja",
+      "Algoritma dengan percabangan",
+      "Dekomposisi saja"
+    ],
+    "a": 2
+  },
+  {
+    "q": "Mengapa pengenalan pola dapat membantu menyelesaikan masalah?",
+    "o": [
+      "Karena solusi dari masalah serupa dapat digunakan kembali",
+      "Karena semua masalah harus dihapus",
+      "Karena tidak perlu berpikir",
+      "Karena membuat masalah lebih sulit"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Salah satu contoh penggunaan berpikir komputasional di sekolah adalah ...",
+    "o": [
+      "Menghafal seluruh isi buku tanpa memahami",
+      "Mengabaikan jadwal pelajaran",
+      "Mengerjakan ujian secara acak",
+      "Menyusun jadwal piket berdasarkan pembagian tugas"
+    ],
+    "a": 3
+  },
+  {
+    "q": "Hubungan antara dekomposisi dan algoritma adalah ...",
+    "o": [
+      "Keduanya tidak berhubungan",
+      "Dekomposisi membagi masalah, algoritma menyusun langkah penyelesaian",
+      "Algoritma digunakan untuk menghapus dekomposisi",
+      "Dekomposisi hanya digunakan pada komputer"
+    ],
+    "a": 1
+  },
+  {
+    "q": "Berpikir komputasional melatih seseorang untuk menjadi ...",
+    "o": [
+      "Terburu-buru mengambil keputusan",
+      "Bergantung sepenuhnya pada komputer",
+      "Logis, kritis, kreatif, dan sistematis",
+      "Menghindari tantangan"
+    ],
+    "a": 2
+  }
 ]
